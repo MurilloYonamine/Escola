@@ -40,13 +40,16 @@ namespace Escola
         {
 
             string email = txtEmail.Text;
+            string confirmarEmail = txtConfirmarEmail.Text;
             string senha = txtSenha.Text;
+            string ConfirmarSenha = txtConfirmarSenha.Text;
             string nome = txtNome.Text;
             string nome_social = txtNomeSocial.Text;
             string cpf = txtCpf.Text;
             DateTime nascimento = dtpNascimento.Value;
             string genero = "";
 
+            //Alimentar a variável gênero
             if (rdoMasculino.Checked)
             {
                 genero = "Masculino";
@@ -58,11 +61,13 @@ namespace Escola
             else if (rdoNaoBinario.Checked)
             {
                 genero = txtNaoBinario.Text;
-            } 
-            Aluno aluno = new Aluno(email, senha, nome, nascimento, cpf, nome_social, genero);
+            }
 
-            aluno.Email_aluno = txtEmail.Text;
-            if(aluno.Email_verificacao() == true)
+            //Instânciamento da classe aluno
+            Aluno aluno = new Aluno(email, senha, nome, nascimento, cpf, nome_social, genero);
+            aluno.ValidaCPF(cpf);
+            
+            if(aluno.Email_verificacao() == true && confirmarEmail == email && ConfirmarSenha == senha)
             {
                 MessageBox.Show("Cadastrado com sucesso!", "Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

@@ -73,6 +73,7 @@
             this.btnCadastrar.TabIndex = 17;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // grpDadosPessoais
             // 
