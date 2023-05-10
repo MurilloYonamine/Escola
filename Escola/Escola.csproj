@@ -59,6 +59,18 @@
     <Compile Include="Cadastro.Designer.cs">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastroProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroProfessor.Designer.cs">
+      <DependentUpon>CadastroProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coordenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coordenador.Designer.cs">
+      <DependentUpon>Coordenador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Curso.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -75,6 +87,12 @@
     <Compile Include="Turma.cs" />
     <EmbeddedResource Include="Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroProfessor.resx">
+      <DependentUpon>CadastroProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coordenador.resx">
+      <DependentUpon>Coordenador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

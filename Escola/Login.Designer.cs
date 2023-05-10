@@ -79,6 +79,7 @@ namespace Escola
             this.txtSenha.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtSenha.Location = new System.Drawing.Point(107, 254);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(333, 26);
             this.txtSenha.TabIndex = 3;
             // 
@@ -92,6 +93,7 @@ namespace Escola
             this.chkConectado.TabIndex = 5;
             this.chkConectado.Text = "Lembre de mim";
             this.chkConectado.UseVisualStyleBackColor = true;
+            this.chkConectado.CheckedChanged += new System.EventHandler(this.chkConectado_CheckedChanged);
             // 
             // btnLogin
             // 
@@ -104,6 +106,7 @@ namespace Escola
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnCadastro
             // 
@@ -115,6 +118,7 @@ namespace Escola
             this.btnCadastro.TabIndex = 9;
             this.btnCadastro.Text = "CADASTRE-SE";
             this.btnCadastro.UseVisualStyleBackColor = false;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // lblCadastro
             // 
@@ -172,6 +176,7 @@ namespace Escola
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Encerrar);
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

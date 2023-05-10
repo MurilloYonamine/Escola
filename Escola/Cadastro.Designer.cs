@@ -31,15 +31,21 @@ namespace Escola
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastro));
             this.grpAcesso = new System.Windows.Forms.GroupBox();
+            this.lblConfirmarSenha = new System.Windows.Forms.Label();
+            this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.lblConfirmarEmail = new System.Windows.Forms.Label();
             this.txtConfirmarEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblConfirmarSenha = new System.Windows.Forms.Label();
-            this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
             this.grpDadosPessoais = new System.Windows.Forms.GroupBox();
+            this.txtNaoBinario = new System.Windows.Forms.TextBox();
+            this.chkNaoBinario = new System.Windows.Forms.CheckBox();
+            this.lblGenero = new System.Windows.Forms.Label();
+            this.chkFeminino = new System.Windows.Forms.CheckBox();
+            this.chkMasculino = new System.Windows.Forms.CheckBox();
+            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCpf = new System.Windows.Forms.Label();
             this.txtCpf = new System.Windows.Forms.TextBox();
@@ -47,16 +53,10 @@ namespace Escola
             this.txtNomeSocial = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
-            this.chkMasculino = new System.Windows.Forms.CheckBox();
-            this.chkFeminino = new System.Windows.Forms.CheckBox();
-            this.lblGenero = new System.Windows.Forms.Label();
-            this.chkNaoBinario = new System.Windows.Forms.CheckBox();
-            this.txtNaoBinario = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.chkPoliticas = new System.Windows.Forms.CheckBox();
             this.picBackground = new System.Windows.Forms.PictureBox();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.grpAcesso.SuspendLayout();
             this.grpDadosPessoais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
@@ -79,6 +79,22 @@ namespace Escola
             this.grpAcesso.TabIndex = 0;
             this.grpAcesso.TabStop = false;
             this.grpAcesso.Text = "Acesso";
+            // 
+            // lblConfirmarSenha
+            // 
+            this.lblConfirmarSenha.AutoSize = true;
+            this.lblConfirmarSenha.Location = new System.Drawing.Point(800, 42);
+            this.lblConfirmarSenha.Name = "lblConfirmarSenha";
+            this.lblConfirmarSenha.Size = new System.Drawing.Size(151, 18);
+            this.lblConfirmarSenha.TabIndex = 7;
+            this.lblConfirmarSenha.Text = "Confirme sua senha:";
+            // 
+            // txtConfirmarSenha
+            // 
+            this.txtConfirmarSenha.Location = new System.Drawing.Point(803, 63);
+            this.txtConfirmarSenha.Name = "txtConfirmarSenha";
+            this.txtConfirmarSenha.Size = new System.Drawing.Size(188, 26);
+            this.txtConfirmarSenha.TabIndex = 6;
             // 
             // lblSenha
             // 
@@ -128,22 +144,6 @@ namespace Escola
             this.txtEmail.Size = new System.Drawing.Size(188, 26);
             this.txtEmail.TabIndex = 0;
             // 
-            // lblConfirmarSenha
-            // 
-            this.lblConfirmarSenha.AutoSize = true;
-            this.lblConfirmarSenha.Location = new System.Drawing.Point(800, 42);
-            this.lblConfirmarSenha.Name = "lblConfirmarSenha";
-            this.lblConfirmarSenha.Size = new System.Drawing.Size(151, 18);
-            this.lblConfirmarSenha.TabIndex = 7;
-            this.lblConfirmarSenha.Text = "Confirme sua senha:";
-            // 
-            // txtConfirmarSenha
-            // 
-            this.txtConfirmarSenha.Location = new System.Drawing.Point(803, 63);
-            this.txtConfirmarSenha.Name = "txtConfirmarSenha";
-            this.txtConfirmarSenha.Size = new System.Drawing.Size(188, 26);
-            this.txtConfirmarSenha.TabIndex = 6;
-            // 
             // grpDadosPessoais
             // 
             this.grpDadosPessoais.BackColor = System.Drawing.Color.Transparent;
@@ -166,6 +166,61 @@ namespace Escola
             this.grpDadosPessoais.TabIndex = 8;
             this.grpDadosPessoais.TabStop = false;
             this.grpDadosPessoais.Text = "Dados Pessoais:";
+            // 
+            // txtNaoBinario
+            // 
+            this.txtNaoBinario.Enabled = false;
+            this.txtNaoBinario.Location = new System.Drawing.Point(803, 130);
+            this.txtNaoBinario.Name = "txtNaoBinario";
+            this.txtNaoBinario.Size = new System.Drawing.Size(188, 26);
+            this.txtNaoBinario.TabIndex = 15;
+            // 
+            // chkNaoBinario
+            // 
+            this.chkNaoBinario.AutoSize = true;
+            this.chkNaoBinario.Location = new System.Drawing.Point(676, 134);
+            this.chkNaoBinario.Name = "chkNaoBinario";
+            this.chkNaoBinario.Size = new System.Drawing.Size(108, 22);
+            this.chkNaoBinario.TabIndex = 14;
+            this.chkNaoBinario.Text = "Não binário";
+            this.chkNaoBinario.UseVisualStyleBackColor = true;
+            // 
+            // lblGenero
+            // 
+            this.lblGenero.AutoSize = true;
+            this.lblGenero.Location = new System.Drawing.Point(445, 104);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(64, 18);
+            this.lblGenero.TabIndex = 13;
+            this.lblGenero.Text = "Gênero:";
+            // 
+            // chkFeminino
+            // 
+            this.chkFeminino.AutoSize = true;
+            this.chkFeminino.Location = new System.Drawing.Point(560, 134);
+            this.chkFeminino.Name = "chkFeminino";
+            this.chkFeminino.Size = new System.Drawing.Size(92, 22);
+            this.chkFeminino.TabIndex = 12;
+            this.chkFeminino.Text = "Feminino";
+            this.chkFeminino.UseVisualStyleBackColor = true;
+            // 
+            // chkMasculino
+            // 
+            this.chkMasculino.AutoSize = true;
+            this.chkMasculino.Location = new System.Drawing.Point(448, 134);
+            this.chkMasculino.Name = "chkMasculino";
+            this.chkMasculino.Size = new System.Drawing.Size(97, 22);
+            this.chkMasculino.TabIndex = 11;
+            this.chkMasculino.Text = "Masculino";
+            this.chkMasculino.UseVisualStyleBackColor = true;
+            // 
+            // dtpNascimento
+            // 
+            this.dtpNascimento.Location = new System.Drawing.Point(239, 130);
+            this.dtpNascimento.Name = "dtpNascimento";
+            this.dtpNascimento.Size = new System.Drawing.Size(183, 26);
+            this.dtpNascimento.TabIndex = 8;
+            this.dtpNascimento.Value = new System.DateTime(2023, 5, 10, 0, 0, 0, 0);
             // 
             // label1
             // 
@@ -224,61 +279,17 @@ namespace Escola
             this.txtNome.Size = new System.Drawing.Size(437, 26);
             this.txtNome.TabIndex = 0;
             // 
-            // dtpNascimento
+            // btnCadastrar
             // 
-            this.dtpNascimento.Location = new System.Drawing.Point(239, 130);
-            this.dtpNascimento.Name = "dtpNascimento";
-            this.dtpNascimento.Size = new System.Drawing.Size(183, 26);
-            this.dtpNascimento.TabIndex = 8;
-            this.dtpNascimento.Value = new System.DateTime(2023, 5, 10, 0, 0, 0, 0);
-            this.dtpNascimento.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // chkMasculino
-            // 
-            this.chkMasculino.AutoSize = true;
-            this.chkMasculino.Location = new System.Drawing.Point(448, 134);
-            this.chkMasculino.Name = "chkMasculino";
-            this.chkMasculino.Size = new System.Drawing.Size(97, 22);
-            this.chkMasculino.TabIndex = 11;
-            this.chkMasculino.Text = "Masculino";
-            this.chkMasculino.UseVisualStyleBackColor = true;
-            // 
-            // chkFeminino
-            // 
-            this.chkFeminino.AutoSize = true;
-            this.chkFeminino.Location = new System.Drawing.Point(560, 134);
-            this.chkFeminino.Name = "chkFeminino";
-            this.chkFeminino.Size = new System.Drawing.Size(92, 22);
-            this.chkFeminino.TabIndex = 12;
-            this.chkFeminino.Text = "Feminino";
-            this.chkFeminino.UseVisualStyleBackColor = true;
-            // 
-            // lblGenero
-            // 
-            this.lblGenero.AutoSize = true;
-            this.lblGenero.Location = new System.Drawing.Point(445, 104);
-            this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(64, 18);
-            this.lblGenero.TabIndex = 13;
-            this.lblGenero.Text = "Gênero:";
-            // 
-            // chkNaoBinario
-            // 
-            this.chkNaoBinario.AutoSize = true;
-            this.chkNaoBinario.Location = new System.Drawing.Point(676, 134);
-            this.chkNaoBinario.Name = "chkNaoBinario";
-            this.chkNaoBinario.Size = new System.Drawing.Size(108, 22);
-            this.chkNaoBinario.TabIndex = 14;
-            this.chkNaoBinario.Text = "Não binário";
-            this.chkNaoBinario.UseVisualStyleBackColor = true;
-            // 
-            // txtNaoBinario
-            // 
-            this.txtNaoBinario.Enabled = false;
-            this.txtNaoBinario.Location = new System.Drawing.Point(803, 130);
-            this.txtNaoBinario.Name = "txtNaoBinario";
-            this.txtNaoBinario.Size = new System.Drawing.Size(188, 26);
-            this.txtNaoBinario.TabIndex = 15;
+            this.btnCadastrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCadastrar.Image = global::Escola.Properties.Resources.retangulo;
+            this.btnCadastrar.Location = new System.Drawing.Point(584, 437);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(184, 38);
+            this.btnCadastrar.TabIndex = 12;
+            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
             // 
             // chkPoliticas
             // 
@@ -301,18 +312,6 @@ namespace Escola
             this.picBackground.TabIndex = 11;
             this.picBackground.TabStop = false;
             // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCadastrar.Image = global::Escola.Properties.Resources.retangulo;
-            this.btnCadastrar.Location = new System.Drawing.Point(584, 437);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(184, 38);
-            this.btnCadastrar.TabIndex = 12;
-            this.btnCadastrar.Text = "CADASTRAR";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            // 
             // frmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -328,9 +327,11 @@ namespace Escola
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frmCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Encerrar);
             this.grpAcesso.ResumeLayout(false);
             this.grpAcesso.PerformLayout();
             this.grpDadosPessoais.ResumeLayout(false);
