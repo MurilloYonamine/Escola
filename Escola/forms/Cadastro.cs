@@ -73,7 +73,7 @@ namespace Escola
             }
             else
             {
-                MessageBox.Show("Email inválido!", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ERRO!", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             Close();
