@@ -31,6 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroProfessor));
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.grpDadosPessoais = new System.Windows.Forms.GroupBox();
+            this.lblNomeSocial = new System.Windows.Forms.Label();
+            this.txtNomeSocial = new System.Windows.Forms.TextBox();
+            this.rdoNaoBinario = new System.Windows.Forms.RadioButton();
+            this.rdoFeminino = new System.Windows.Forms.RadioButton();
+            this.rdoMasculino = new System.Windows.Forms.RadioButton();
+            this.txtNaoBinario = new System.Windows.Forms.TextBox();
+            this.lblGenero = new System.Windows.Forms.Label();
+            this.lblCpf = new System.Windows.Forms.Label();
+            this.txtCpf = new System.Windows.Forms.TextBox();
             this.lblFormacao = new System.Windows.Forms.Label();
             this.txtFormacao = new System.Windows.Forms.TextBox();
             this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
@@ -67,7 +76,7 @@
             this.btnCadastrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCadastrar.Image = global::Escola.Properties.Resources.retangulo;
-            this.btnCadastrar.Location = new System.Drawing.Point(352, 437);
+            this.btnCadastrar.Location = new System.Drawing.Point(353, 518);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(338, 61);
             this.btnCadastrar.TabIndex = 17;
@@ -78,6 +87,15 @@
             // grpDadosPessoais
             // 
             this.grpDadosPessoais.BackColor = System.Drawing.Color.Transparent;
+            this.grpDadosPessoais.Controls.Add(this.lblNomeSocial);
+            this.grpDadosPessoais.Controls.Add(this.txtNomeSocial);
+            this.grpDadosPessoais.Controls.Add(this.rdoNaoBinario);
+            this.grpDadosPessoais.Controls.Add(this.rdoFeminino);
+            this.grpDadosPessoais.Controls.Add(this.rdoMasculino);
+            this.grpDadosPessoais.Controls.Add(this.txtNaoBinario);
+            this.grpDadosPessoais.Controls.Add(this.lblGenero);
+            this.grpDadosPessoais.Controls.Add(this.lblCpf);
+            this.grpDadosPessoais.Controls.Add(this.txtCpf);
             this.grpDadosPessoais.Controls.Add(this.lblFormacao);
             this.grpDadosPessoais.Controls.Add(this.txtFormacao);
             this.grpDadosPessoais.Controls.Add(this.dtpNascimento);
@@ -87,10 +105,92 @@
             this.grpDadosPessoais.Controls.Add(this.grpTitulacao);
             this.grpDadosPessoais.Location = new System.Drawing.Point(12, 165);
             this.grpDadosPessoais.Name = "grpDadosPessoais";
-            this.grpDadosPessoais.Size = new System.Drawing.Size(1023, 215);
+            this.grpDadosPessoais.Size = new System.Drawing.Size(1023, 302);
             this.grpDadosPessoais.TabIndex = 14;
             this.grpDadosPessoais.TabStop = false;
             this.grpDadosPessoais.Text = "Dados Pessoais:";
+            // 
+            // lblNomeSocial
+            // 
+            this.lblNomeSocial.AutoSize = true;
+            this.lblNomeSocial.Location = new System.Drawing.Point(237, 214);
+            this.lblNomeSocial.Name = "lblNomeSocial";
+            this.lblNomeSocial.Size = new System.Drawing.Size(102, 18);
+            this.lblNomeSocial.TabIndex = 31;
+            this.lblNomeSocial.Text = "Nome Social:";
+            // 
+            // txtNomeSocial
+            // 
+            this.txtNomeSocial.Location = new System.Drawing.Point(240, 235);
+            this.txtNomeSocial.Name = "txtNomeSocial";
+            this.txtNomeSocial.Size = new System.Drawing.Size(170, 26);
+            this.txtNomeSocial.TabIndex = 30;
+            // 
+            // rdoNaoBinario
+            // 
+            this.rdoNaoBinario.AutoSize = true;
+            this.rdoNaoBinario.Location = new System.Drawing.Point(658, 239);
+            this.rdoNaoBinario.Name = "rdoNaoBinario";
+            this.rdoNaoBinario.Size = new System.Drawing.Size(109, 22);
+            this.rdoNaoBinario.TabIndex = 29;
+            this.rdoNaoBinario.TabStop = true;
+            this.rdoNaoBinario.Text = "Não Binário";
+            this.rdoNaoBinario.UseVisualStyleBackColor = true;
+            // 
+            // rdoFeminino
+            // 
+            this.rdoFeminino.AutoSize = true;
+            this.rdoFeminino.Location = new System.Drawing.Point(553, 239);
+            this.rdoFeminino.Name = "rdoFeminino";
+            this.rdoFeminino.Size = new System.Drawing.Size(91, 22);
+            this.rdoFeminino.TabIndex = 28;
+            this.rdoFeminino.TabStop = true;
+            this.rdoFeminino.Text = "Feminino";
+            this.rdoFeminino.UseVisualStyleBackColor = true;
+            // 
+            // rdoMasculino
+            // 
+            this.rdoMasculino.AutoSize = true;
+            this.rdoMasculino.Location = new System.Drawing.Point(441, 239);
+            this.rdoMasculino.Name = "rdoMasculino";
+            this.rdoMasculino.Size = new System.Drawing.Size(96, 22);
+            this.rdoMasculino.TabIndex = 27;
+            this.rdoMasculino.TabStop = true;
+            this.rdoMasculino.Text = "Masculino";
+            this.rdoMasculino.UseVisualStyleBackColor = true;
+            // 
+            // txtNaoBinario
+            // 
+            this.txtNaoBinario.Location = new System.Drawing.Point(773, 238);
+            this.txtNaoBinario.Name = "txtNaoBinario";
+            this.txtNaoBinario.Size = new System.Drawing.Size(188, 26);
+            this.txtNaoBinario.TabIndex = 26;
+            this.txtNaoBinario.Visible = false;
+            // 
+            // lblGenero
+            // 
+            this.lblGenero.AutoSize = true;
+            this.lblGenero.Location = new System.Drawing.Point(438, 214);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(64, 18);
+            this.lblGenero.TabIndex = 25;
+            this.lblGenero.Text = "Gênero:";
+            // 
+            // lblCpf
+            // 
+            this.lblCpf.AutoSize = true;
+            this.lblCpf.Location = new System.Drawing.Point(21, 213);
+            this.lblCpf.Name = "lblCpf";
+            this.lblCpf.Size = new System.Drawing.Size(45, 18);
+            this.lblCpf.TabIndex = 24;
+            this.lblCpf.Text = "CPF:";
+            // 
+            // txtCpf
+            // 
+            this.txtCpf.Location = new System.Drawing.Point(24, 234);
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(188, 26);
+            this.txtCpf.TabIndex = 23;
             // 
             // lblFormacao
             // 
@@ -332,7 +432,7 @@
             // picBackground
             // 
             this.picBackground.Image = global::Escola.Properties.Resources.retangulo;
-            this.picBackground.Location = new System.Drawing.Point(-1, 406);
+            this.picBackground.Location = new System.Drawing.Point(0, 487);
             this.picBackground.Name = "picBackground";
             this.picBackground.Size = new System.Drawing.Size(1048, 131);
             this.picBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -344,7 +444,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1047, 536);
+            this.ClientSize = new System.Drawing.Size(1047, 616);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.grpDadosPessoais);
             this.Controls.Add(this.grpAcesso);
@@ -397,5 +497,14 @@
         private System.Windows.Forms.RadioButton rdoMba;
         private System.Windows.Forms.RadioButton rdoEspecializacao;
         private System.Windows.Forms.RadioButton rdoTecnologo;
+        private System.Windows.Forms.RadioButton rdoNaoBinario;
+        private System.Windows.Forms.RadioButton rdoFeminino;
+        private System.Windows.Forms.RadioButton rdoMasculino;
+        private System.Windows.Forms.TextBox txtNaoBinario;
+        private System.Windows.Forms.Label lblGenero;
+        private System.Windows.Forms.Label lblCpf;
+        private System.Windows.Forms.TextBox txtCpf;
+        private System.Windows.Forms.Label lblNomeSocial;
+        private System.Windows.Forms.TextBox txtNomeSocial;
     }
 }

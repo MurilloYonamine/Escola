@@ -3,56 +3,45 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
 using System.Text;
-using System.Windows.Forms;
+using System.Threading.Tasks;
 
-namespace Escola
+namespace Escola.classes
 {
-    public class Aluno
+    public class Pessoa
     {
-        private string email_aluno;
-        private string senha_aluno;
-        private string nome_aluno;
-        private int id_aluno;
-        private DateTime nascimento_aluno;
-        private int idade_aluno;
-        private string cpf_aluno;
+        private string email;
+        private string senha;
+        private string nome;
+        private DateTime nascimento;
+        private int idade;
+        private string cpf;
         private string nome_social;
         private string genero;
 
-        public Aluno(string email_aluno, string senha_aluno, string nome_aluno, DateTime nascimento_aluno, string cpf_aluno, string nome_social, string genero)
+        public virtual string Email
         {
-            this.email_aluno = email_aluno;
-            this.senha_aluno = senha_aluno;
-            this.nome_aluno = nome_aluno;
-            this.nascimento_aluno = nascimento_aluno;
-            this.cpf_aluno = cpf_aluno;
-            this.nome_social = nome_social;
-            this.genero = genero;
+            get { return this.email; }
+            set { this.email = value; }
         }
-        public string Email_aluno
+        public virtual string Senha
         {
-            get { return this.email_aluno; }
-            set { this.email_aluno = value; }
+            get { return this.senha; }
+            set { this.senha = value; }
         }
-        public string Senha_aluno
+        public virtual string Nome
         {
-            get { return this.senha_aluno; }
-            set { this.senha_aluno = value; }
+            get { return this.nome; }
+            set { this.nome = value; }
         }
-        public string Nome_aluno
+        public virtual DateTime Nascimento
         {
-            get { return this.nome_aluno; }
-            set { this.nome_aluno = value; }
+            get { return this.nascimento; }
+            set { this.nascimento = value; }
         }
-        public DateTime Nascimento_aluno
+        public virtual string Cpf
         {
-            get { return this.nascimento_aluno; }
-            set { this.nascimento_aluno = value; }
-        }
-        public string Cpf_aluno
-        {
-            get { return this.cpf_aluno; }
-            set { cpf_aluno = value; }
+            get { return this.cpf; }
+            set { this.cpf = value; }
         }
         public string Nome_social
         {
@@ -64,12 +53,11 @@ namespace Escola
             get { return this.genero; }
             set { this.genero = value; }
         }
-
         public bool Email_verificacao()
         {
             try
             {
-                MailAddress email_verify = new MailAddress(this.email_aluno);
+                MailAddress email_verify = new MailAddress(this.email);
                 return true;
             }
             catch
@@ -79,14 +67,13 @@ namespace Escola
         }
         public int Idade()
         {
-            this.idade_aluno = DateTime.Now.Year - this.nascimento_aluno.Year;
-            if (DateTime.Now.DayOfYear < this.nascimento_aluno.DayOfYear)
+            this.idade = DateTime.Now.Year - this.nascimento.Year;
+            if (DateTime.Now.DayOfYear < this.nascimento.DayOfYear)
             {
-                this.idade_aluno = this.idade_aluno - 1;
+                this.idade = this.idade - 1;
             }
-            return this.idade_aluno;
+            return this.idade;
         }
-
         public bool ValidaCPF(string vrCPF)
 
         {
@@ -144,6 +131,5 @@ namespace Escola
 
             return true;
         }
-
     }
 }

@@ -4,7 +4,7 @@
     <Position X="3.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAAAABAAAAAAAAAAAAAIAAAAAAAAAAAABAAAgACg=</HashCode>
-      <FileName>Curso.cs</FileName>
+      <FileName>classes\Curso.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Modalidade" />
@@ -14,22 +14,22 @@
   <Class Name="Escola.Aluno">
     <Position X="10.75" Y="3.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAABAQAAAAAgAAAAAAAAAAAACAAAABEAAAAAAAAA=</HashCode>
-      <FileName>Aluno.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAGAAAABAAAAAAAAAA=</HashCode>
+      <FileName>classes\Aluno.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Escola.Professor">
     <Position X="10.5" Y="0.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>ABAABAAAAAAAAAAAAAAAAAAAACCAAAAAAAAAIAAQAAA=</HashCode>
-      <FileName>Professor.cs</FileName>
+      <HashCode>ABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAA=</HashCode>
+      <FileName>classes\Professor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Escola.Turma">
     <Position X="7" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAABAAAAQAAAAAAAAAAAASAAAAAAAAAAAAAAAAAACA=</HashCode>
-      <FileName>Turma.cs</FileName>
+      <FileName>classes\Turma.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Professor" />
@@ -40,27 +40,33 @@
     <Position X="1.75" Y="3.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
-      <FileName>Modalidade.cs</FileName>
+      <FileName>classes\Modalidade.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Escola.Nivel">
     <Position X="5.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACg=</HashCode>
-      <FileName>Nivel.cs</FileName>
+      <FileName>classes\Nivel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Escola.Matricula">
     <Position X="8" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAoAAAAAAAQAAAAAAAAAAAAAAAABAAA=</HashCode>
-      <FileName>Matricula.cs</FileName>
-      <NewMemberFileName>matricula.cs</NewMemberFileName>
+      <FileName>classes\Matricula.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Turma" />
       <Property Name="Aluno" />
     </ShowAsAssociation>
+  </Class>
+  <Class Name="Escola.classes.Pessoa">
+    <Position X="13.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAEAAAADAAAAAgAAIAIAAAACAAAAAAAIACgAGAAgA=</HashCode>
+      <FileName>classes\Pessoa.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
