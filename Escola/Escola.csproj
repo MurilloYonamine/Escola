@@ -95,6 +95,12 @@
     <Compile Include="classes\Aluno.cs" />
     <Compile Include="classes\BancoDeDados.cs" />
     <Compile Include="classes\Pessoa.cs" />
+    <Compile Include="forms\alunoAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\alunoAcesso.Designer.cs">
+      <DependentUpon>alunoAcesso.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>

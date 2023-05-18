@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Escola.forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,6 +57,24 @@ namespace Escola
         {
             String usuario = txtUsuario.Text;
             String senha = txtSenha.Text;
+
+            Aluno aluno = new Aluno();
+
+            if(usuario == aluno.Email && senha == aluno.Senha && aluno.Nome_social == "")
+            {
+                MessageBox.Show(aluno.Nome, "Bem vindo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                alunoAcesso tela = new alunoAcesso();
+                tela.Show();
+                this.Hide();
+            }
+            else if(usuario == aluno.Email && senha == aluno.Senha && aluno.Nome_social != "")
+            {
+                MessageBox.Show(aluno.Nome_social, "Bem vindo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                alunoAcesso tela = new alunoAcesso();
+                tela.Show();
+                this.Hide();
+            }
+
 
             if(usuario == "coordenador" && senha == "123")
             {
