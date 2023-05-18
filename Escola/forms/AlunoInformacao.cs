@@ -10,26 +10,18 @@ using System.Windows.Forms;
 
 namespace Escola.forms
 {
-    public partial class AlunoAcesso : Form
+    public partial class Informação : Form
     {
-        public AlunoAcesso()
+        public Informação()
         {
             InitializeComponent();
             this.BackColor = Color.FromArgb(43, 43, 43);
         }
 
-        private void btnInformacoes_Click(object sender, EventArgs e)
-        {
-            // Chamar o formulário de informações do aluno
-            frmCadastro tela = new frmCadastro();
-            tela.Show();
-            this.Hide();
-        }
-
         private void Encerrar(object sender, FormClosedEventArgs e)
         {
-            //Fechar o formulário do aluno
-            System.Environment.Exit(0);
+            AlunoAcesso telaAnterior = new AlunoAcesso();
+            telaAnterior.Show();
         }
     }
 }

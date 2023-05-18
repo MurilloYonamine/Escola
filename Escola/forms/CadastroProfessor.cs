@@ -1,4 +1,6 @@
 ﻿using Escola.classes;
+using Escola.Controller;
+using Escola.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,6 +33,8 @@ namespace Escola
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             Professor professor = new Professor();
+            ProfessorController pController = new ProfessorController();
+
             professor.Email = txtEmail.Text;
             string confirmarEmail = txtConfirmarEmail.Text;
             professor.Senha = txtSenha.Text;
@@ -106,12 +110,12 @@ namespace Escola
             if (professor.Email_verificacao() == true && confirmarEmail == professor.Email && ConfirmarSenha == professor.Senha)
             {
                 MessageBox.Show("Cadastrado com sucesso!", "Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                pController.salvar(professor);
             }
             else
             {
                 MessageBox.Show("Email inválido!", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            Close();
         }
 
     }

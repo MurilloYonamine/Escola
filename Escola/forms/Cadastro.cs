@@ -1,4 +1,5 @@
 ﻿using Escola.classes;
+using Escola.Controller;
 using System;
 using System.Drawing;
 using System.Net.Mail;
@@ -40,6 +41,8 @@ namespace Escola
         private void btnCadastrar_Click(object sender, System.EventArgs e)
         {
             Aluno aluno = new Aluno();
+            AlunoController aController = new AlunoController();
+
             aluno.Email = txtEmail.Text;
             string confirmarEmail = txtConfirmarEmail.Text;
             aluno.Senha = txtSenha.Text;
@@ -70,6 +73,7 @@ namespace Escola
             if (aluno.Email_verificacao() == true && confirmarEmail == aluno.Email && ConfirmarSenha == aluno.Senha && chkPoliticas.Checked == true)
             {
                 MessageBox.Show("Cadastrado com sucesso!", "Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                aController.salvar(aluno);
             }
             else
             {

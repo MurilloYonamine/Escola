@@ -57,7 +57,6 @@ namespace Escola
             this.lblCoordenacao.Size = new System.Drawing.Size(191, 42);
             this.lblCoordenacao.TabIndex = 1;
             this.lblCoordenacao.Text = "Coordenação";
-            this.lblCoordenacao.Click += new System.EventHandler(this.lblCoordenacao_Click);
             // 
             // picBackground
             // 
@@ -68,7 +67,6 @@ namespace Escola
             this.picBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBackground.TabIndex = 2;
             this.picBackground.TabStop = false;
-            this.picBackground.Click += new System.EventHandler(this.picBackground_Click);
             // 
             // frmCoordenador
             // 
@@ -88,7 +86,6 @@ namespace Escola
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Coordenador";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Encerrar);
-            this.Load += new System.EventHandler(this.frmCoordenador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

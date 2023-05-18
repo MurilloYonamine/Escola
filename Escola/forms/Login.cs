@@ -63,14 +63,14 @@ namespace Escola
             if(usuario == aluno.Email && senha == aluno.Senha && aluno.Nome_social == "")
             {
                 MessageBox.Show(aluno.Nome, "Bem vindo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                alunoAcesso tela = new alunoAcesso();
+                AlunoAcesso tela = new AlunoAcesso();
                 tela.Show();
                 this.Hide();
             }
             else if(usuario == aluno.Email && senha == aluno.Senha && aluno.Nome_social != "")
             {
                 MessageBox.Show(aluno.Nome_social, "Bem vindo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                alunoAcesso tela = new alunoAcesso();
+                AlunoAcesso tela = new AlunoAcesso();
                 tela.Show();
                 this.Hide();
             }

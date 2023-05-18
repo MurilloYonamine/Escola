@@ -10,7 +10,7 @@ namespace Escola.classes
     public class BancoDeDados
     {
         static string conexao = "server=localhost;port=3306;" +
-            "database=teste;uid=root;password=";
+            "database=bd_inst;uid=root;password=";
         static MySqlConnection connection;
         public MySqlConnection conectar()
         {

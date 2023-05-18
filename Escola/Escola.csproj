@@ -92,14 +92,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="classes\Aluno.cs" />
-    <Compile Include="classes\BancoDeDados.cs" />
-    <Compile Include="classes\Pessoa.cs" />
-    <Compile Include="forms\alunoAcesso.cs">
+    <Compile Include="Controller\AlunoController.cs" />
+    <Compile Include="Controller\ProfessorController.cs" />
+    <Compile Include="DAO\AlunoDAO.cs" />
+    <Compile Include="DAO\IDAO.cs" />
+    <Compile Include="DAO\ProfessorDAO.cs" />
+    <Compile Include="forms\AlunoInformacao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\alunoAcesso.Designer.cs">
-      <DependentUpon>alunoAcesso.cs</DependentUpon>
+    <Compile Include="forms\AlunoInformacao.Designer.cs">
+      <DependentUpon>AlunoInformacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\Aluno.cs" />
+    <Compile Include="model\BancoDeDados.cs" />
+    <Compile Include="model\Pessoa.cs" />
+    <Compile Include="forms\AlunoAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\AlunoAcesso.Designer.cs">
+      <DependentUpon>AlunoAcesso.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\Cadastro.cs">
       <SubType>Form</SubType>
@@ -119,20 +130,26 @@
     <Compile Include="forms\Coordenador.Designer.cs">
       <DependentUpon>Coordenador.cs</DependentUpon>
     </Compile>
-    <Compile Include="classes\Curso.cs" />
+    <Compile Include="model\Curso.cs" />
     <Compile Include="forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="classes\Matricula.cs" />
-    <Compile Include="classes\Modalidade.cs" />
-    <Compile Include="classes\Nivel.cs" />
-    <Compile Include="classes\Professor.cs" />
+    <Compile Include="model\Matricula.cs" />
+    <Compile Include="model\Modalidade.cs" />
+    <Compile Include="model\Nivel.cs" />
+    <Compile Include="model\Professor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="classes\Turma.cs" />
+    <Compile Include="model\Turma.cs" />
+    <EmbeddedResource Include="forms\AlunoAcesso.resx">
+      <DependentUpon>AlunoAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\AlunoInformacao.resx">
+      <DependentUpon>AlunoInformacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </EmbeddedResource>

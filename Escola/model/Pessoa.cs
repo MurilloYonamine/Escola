@@ -9,6 +9,7 @@ namespace Escola.classes
 {
     public class Pessoa
     {
+        private int id;
         private string email;
         private string senha;
         private string nome;
@@ -17,6 +18,12 @@ namespace Escola.classes
         private string cpf;
         private string nome_social;
         private string genero;
+
+        public virtual int Id
+        {
+            get { return this.id; }
+            set { this.id = value; }
+        }
 
         public virtual string Email
         {
