@@ -33,6 +33,7 @@ namespace Escola
             this.btnAdicionarProfessor = new System.Windows.Forms.Button();
             this.lblCoordenacao = new System.Windows.Forms.Label();
             this.picBackground = new System.Windows.Forms.PictureBox();
+            this.btnCursos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,12 +69,25 @@ namespace Escola
             this.picBackground.TabIndex = 2;
             this.picBackground.TabStop = false;
             // 
+            // btnCursos
+            // 
+            this.btnCursos.BackColor = System.Drawing.Color.Black;
+            this.btnCursos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCursos.Location = new System.Drawing.Point(111, 227);
+            this.btnCursos.Name = "btnCursos";
+            this.btnCursos.Size = new System.Drawing.Size(143, 38);
+            this.btnCursos.TabIndex = 3;
+            this.btnCursos.Text = "Cursos";
+            this.btnCursos.UseVisualStyleBackColor = false;
+            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
+            // 
             // frmCoordenador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(368, 601);
+            this.Controls.Add(this.btnCursos);
             this.Controls.Add(this.picBackground);
             this.Controls.Add(this.lblCoordenacao);
             this.Controls.Add(this.btnAdicionarProfessor);
@@ -97,5 +111,6 @@ namespace Escola
         private System.Windows.Forms.Button btnAdicionarProfessor;
         private System.Windows.Forms.Label lblCoordenacao;
         private System.Windows.Forms.PictureBox picBackground;
+        private System.Windows.Forms.Button btnCursos;
     }
 }

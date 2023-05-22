@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Escola.forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,13 @@ namespace Escola
         private void btnAdicionarProfessor_Click(object sender, EventArgs e)
         {
             frmCadastroProfessor tela = new frmCadastroProfessor();
+            tela.Show();
+            this.Hide();
+        }
+
+        private void btnCursos_Click(object sender, EventArgs e)
+        {
+            frmCursoAcesso tela = new frmCursoAcesso();
             tela.Show();
             this.Hide();
         }

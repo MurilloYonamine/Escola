@@ -55,6 +55,11 @@
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.Collections.NonGeneric, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.NonGeneric.4.3.0\lib\net46\System.Collections.NonGeneric.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -93,48 +98,68 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\AlunoController.cs" />
+    <Compile Include="Controller\PessoaLoginController.cs" />
+    <Compile Include="Controller\CursoController.cs" />
+    <Compile Include="Controller\ModalidadeController.cs" />
+    <Compile Include="Controller\NivelController.cs" />
     <Compile Include="Controller\ProfessorController.cs" />
     <Compile Include="DAO\AlunoDAO.cs" />
+    <Compile Include="DAO\PessoaLoginDAO.cs" />
+    <Compile Include="DAO\CursoDAO.cs" />
     <Compile Include="DAO\IDAO.cs" />
+    <Compile Include="DAO\ModalidadeDAO.cs" />
+    <Compile Include="DAO\NivelDAO.cs" />
     <Compile Include="DAO\ProfessorDAO.cs" />
-    <Compile Include="forms\AlunoInformacao.cs">
+    <Compile Include="view\AlunoInformacao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\AlunoInformacao.Designer.cs">
+    <Compile Include="view\AlunoInformacao.Designer.cs">
       <DependentUpon>AlunoInformacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\CadastroCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\CadastroCurso.Designer.cs">
+      <DependentUpon>CadastroCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\CursoAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\CursoAcesso.Designer.cs">
+      <DependentUpon>CursoAcesso.cs</DependentUpon>
     </Compile>
     <Compile Include="model\Aluno.cs" />
     <Compile Include="model\BancoDeDados.cs" />
     <Compile Include="model\Pessoa.cs" />
-    <Compile Include="forms\AlunoAcesso.cs">
+    <Compile Include="view\AlunoAcesso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\AlunoAcesso.Designer.cs">
+    <Compile Include="view\AlunoAcesso.Designer.cs">
       <DependentUpon>AlunoAcesso.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\Cadastro.cs">
+    <Compile Include="view\CadastroAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\Cadastro.Designer.cs">
-      <DependentUpon>Cadastro.cs</DependentUpon>
+    <Compile Include="view\CadastroAluno.Designer.cs">
+      <DependentUpon>CadastroAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\CadastroProfessor.cs">
+    <Compile Include="view\CadastroProfessor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\CadastroProfessor.Designer.cs">
+    <Compile Include="view\CadastroProfessor.Designer.cs">
       <DependentUpon>CadastroProfessor.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\Coordenador.cs">
+    <Compile Include="view\Coordenador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\Coordenador.Designer.cs">
+    <Compile Include="view\Coordenador.Designer.cs">
       <DependentUpon>Coordenador.cs</DependentUpon>
     </Compile>
     <Compile Include="model\Curso.cs" />
-    <Compile Include="forms\Login.cs">
+    <Compile Include="view\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\Login.Designer.cs">
+    <Compile Include="view\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="model\Matricula.cs" />
@@ -144,22 +169,34 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="model\Turma.cs" />
-    <EmbeddedResource Include="forms\AlunoAcesso.resx">
+    <Compile Include="view\ProfessorAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\ProfessorAcesso.Designer.cs">
+      <DependentUpon>ProfessorAcesso.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\AlunoAcesso.resx">
       <DependentUpon>AlunoAcesso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\AlunoInformacao.resx">
+    <EmbeddedResource Include="view\AlunoInformacao.resx">
       <DependentUpon>AlunoInformacao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\Cadastro.resx">
-      <DependentUpon>Cadastro.cs</DependentUpon>
+    <EmbeddedResource Include="view\CadastroAluno.resx">
+      <DependentUpon>CadastroAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\CadastroProfessor.resx">
+    <EmbeddedResource Include="view\CadastroCurso.resx">
+      <DependentUpon>CadastroCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\CadastroProfessor.resx">
       <DependentUpon>CadastroProfessor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\Coordenador.resx">
+    <EmbeddedResource Include="view\Coordenador.resx">
       <DependentUpon>Coordenador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\Login.resx">
+    <EmbeddedResource Include="view\CursoAcesso.resx">
+      <DependentUpon>CursoAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -172,6 +209,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="view\ProfessorAcesso.resx">
+      <DependentUpon>ProfessorAcesso.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="EscolaDiagrama.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

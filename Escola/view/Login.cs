@@ -1,4 +1,6 @@
-﻿using Escola.forms;
+﻿using Escola.classes;
+using Escola.Controller;
+using Escola.forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,35 +57,25 @@ namespace Escola
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            String usuario = txtUsuario.Text;
-            String senha = txtSenha.Text;
+            Pessoa pessoa = new Pessoa();
+            pessoa.Email = txtUsuario.Text;
+            pessoa.Senha = txtSenha.Text;
+
+            this.Hide();
+            PessoaLoginController plController = new PessoaLoginController();
+            pessoa = plController.Logar(pessoa);
 
             Aluno aluno = new Aluno();
 
-            if(usuario == aluno.Email && senha == aluno.Senha && aluno.Nome_social == "")
-            {
-                MessageBox.Show(aluno.Nome, "Bem vindo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                AlunoAcesso tela = new AlunoAcesso();
-                tela.Show();
-                this.Hide();
-            }
-            else if(usuario == aluno.Email && senha == aluno.Senha && aluno.Nome_social != "")
-            {
-                MessageBox.Show(aluno.Nome_social, "Bem vindo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                AlunoAcesso tela = new AlunoAcesso();
-                tela.Show();
-                this.Hide();
-            }
 
-
-            if(usuario == "coordenador" && senha == "123")
+            if(txtUsuario.Text == "coordenador" && txtSenha.Text == "123")
             {
                 MessageBox.Show("Seja bem vindo coordenador!", "Bem vindo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmCoordenador tela = new frmCoordenador();
                 tela.Show();
                 this.Hide();
             }
-            if(usuario == "" && senha == "")
+            if(txtUsuario.Text == "" && txtSenha.Text == "")
             {
                 MessageBox.Show("Por favor digite um usuário ou senha válido!", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

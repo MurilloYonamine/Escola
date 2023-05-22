@@ -29,6 +29,7 @@ namespace Escola.forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Informação));
             this.picBackground = new System.Windows.Forms.PictureBox();
             this.txtNaoBinario = new System.Windows.Forms.TextBox();
             this.lblGenero = new System.Windows.Forms.Label();
@@ -53,7 +54,7 @@ namespace Escola.forms
             // 
             this.picBackground.Image = global::Escola.Properties.Resources.retangulo;
             this.picBackground.Location = new System.Drawing.Point(0, 302);
-            this.picBackground.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picBackground.Margin = new System.Windows.Forms.Padding(4);
             this.picBackground.Name = "picBackground";
             this.picBackground.Size = new System.Drawing.Size(1089, 86);
             this.picBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -208,7 +209,8 @@ namespace Escola.forms
             this.Controls.Add(this.picBackground);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Informação";
             this.Text = "INFORMAÇÃO DADOS DO ALUNO";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Encerrar);
